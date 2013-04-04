@@ -102,7 +102,7 @@ function woboq_amazon_link_globalizer_the_content_filter_callback($match) {
 	foreach ($woboq_amazon_link_globalizer_tlds as $i => $tld) {
 		$aId = get_option('woboq_amazon_link_globalizer_affiliate_id_'.$tld);
 		if ($aId && strlen($aId) > 0)
-			$ret = $ret . "&" . $tld . "=" . htmlspecialchars($aId);
+			$ret = $ret . "&" . $tld . "=" . urlencode($aId);
 	}
 	$ret = $ret . "\" rel=\"nofollow\"";
 	//file_put_contents('php://stderr', print_r($ret, TRUE));
