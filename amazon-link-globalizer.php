@@ -67,7 +67,7 @@ global $woboq_amazon_link_globalizer_tlds;
 foreach ($woboq_amazon_link_globalizer_tlds as $i => $tld) {
 	$option_name = "woboq_amazon_link_globalizer_affiliate_id_" . $tld;
 	$option_name_list .= $option_name . ",";
-	$option_value = get_option($option_name);
+	$option_value = htmlspecialchars(get_option($option_name));
 	if ($option_value == FALSE)
 		$option_value = "";
     $html = <<<HERE
@@ -102,7 +102,7 @@ function woboq_amazon_link_globalizer_the_content_filter_callback($match) {
 	foreach ($woboq_amazon_link_globalizer_tlds as $i => $tld) {
 		$aId = get_option('woboq_amazon_link_globalizer_affiliate_id_'.$tld);
 		if ($aId && strlen($aId) > 0)
-			$ret = $ret . "&" . $tld . "=" . $aId;
+			$ret = $ret . "&" . $tld . "=" . htmlspecialchars($aId);
 	}
 	$ret = $ret . "\" rel=\"nofollow\"";
 	//file_put_contents('php://stderr', print_r($ret, TRUE));
