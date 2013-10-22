@@ -3,7 +3,7 @@ Contributors: guruz
 Tags: amazon, amazon affiliate, amazon associates, amazon partner, amazon localizer
 Requires at least: 2.8
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,3 +31,6 @@ In contrast to similar plugins, this one does not use Javascript.
 
 = 1.0 =
 * Initial release
+
+= 1.1 =
+* add keyword search
