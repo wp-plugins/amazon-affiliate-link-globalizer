@@ -17,6 +17,7 @@ A-FWD will do the country lookup for you. You can specify your Affiliate IDs for
 
 * Can rewrite single title text links (with ASIN) of various URL formats
 * Supports Amazon.com and Amzn.com links
+* Can also rewrite links to search keywords / results
 * Can forward to the correct Amazon store (Canada, UK, ...)
 * The plugin does not change your database, so if you deactivate it you will get your unchanged Amazon links back.
 
